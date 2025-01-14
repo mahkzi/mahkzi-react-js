@@ -1,18 +1,12 @@
-import CartWidget from "./CartWidget"
+import Navbar from 'react-bootstrap/Navbar';
+import CartWidget from "./CartWidget";
+import NavBarContainer from './NavBarContainer';
 function NavBar(){
 return(
-    <header className="header">
-    <nav className="nav">
-        <ul className="ul">
-            <li className="lista">Maiky Mouse</li>
-            <li className="lista"><a href="../index.html" className="links">Home</a></li>
-            <li className="lista">Inalambricos</li>
-            <li className="lista">Gamers</li>
-            <li className="lista">Oficina</li>
-        </ul>
+    <Navbar bg="dark" data-bs-theme="dark">
+        <NavBarContainer/>
         <CartWidget/>
-    </nav>
-</header>
+      </Navbar>
 )
 }
 export default NavBar
