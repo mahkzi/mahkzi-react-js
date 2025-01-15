@@ -4,11 +4,11 @@ import { Link } from "react-router";
 function NavBarLinks(){
     return(
        <>
-        <Navbar.Brand to="/" as={Link}>Maiky Mouse</Navbar.Brand>
+        <Navbar.Brand to="/" as={Link}>Moghar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link to="#home" as={Link}>Home</Nav.Link>
-            <Nav.Link to="#features" as={Link}>Features</Nav.Link>
-            <Nav.Link to="#pricing" as={Link}>Pricing</Nav.Link>
+            <Nav.Link to="#home" as={Link}>Ropa Masculina</Nav.Link>
+            <Nav.Link to="#features" as={Link}>Ropa Femenina</Nav.Link>
+            <Nav.Link to="#pricing" as={Link}>Joyería</Nav.Link>
           </Nav>
           </>
     )

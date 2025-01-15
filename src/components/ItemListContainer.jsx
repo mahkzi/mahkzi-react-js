@@ -1,6 +1,14 @@
+import {useState, useEffect} from "react"
+import ItemList from "./ItemList"
 function ItemListContainer(){
+    const[items, setItems]=useState([])
+    useEffect(()=>{
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+        .then(res=>setItems(res))
+    },[])
     return(
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ipsam cumque libero consequuntur, debitis reprehenderit ducimus quibusdam numquam distinctio corrupti non possimus nisi molestias culpa vel at quae. Quis, laudantium.</p>
+        <ItemList items={items} />
     )
 }
 export default ItemListContainer
