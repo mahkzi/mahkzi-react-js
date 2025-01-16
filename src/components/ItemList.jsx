@@ -6,9 +6,7 @@ function ItemList ({items}){
 return(
 <Container>
     <Row>
-        {items.map(item=>
-            <Item item={item} key={item.id}/>
-        )}
+        {items.map(item=> <Item item={item} key={item.id}/>)}
     </Row>
 </Container>
 )

@@ -5,12 +5,12 @@ function Item({item}){
     return(
 <Col lg={4}>
                 <Card border="ligth" className="text-center">
-                <Card.Img variant="top" src={item.image} />
+                <Card.Img variant="top" src={item.thumbnail} />
                  <Card.Body>
-        <Card.Title>{item.title}</Card.Title>
-        <Card.Text>
-            {item.description}
+                 <Card.Text>
+            Category:{item.category}
         </Card.Text>
+        <Card.Title>{item.title}</Card.Title>
         <Card.Text>
             {item.price}$
         </Card.Text>

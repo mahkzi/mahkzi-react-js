@@ -6,9 +6,9 @@ function NavBarLinks(){
        <>
         <Navbar.Brand to="/" as={Link}>Moghar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link to="#home" as={Link}>Ropa Masculina</Nav.Link>
-            <Nav.Link to="#features" as={Link}>Ropa Femenina</Nav.Link>
-            <Nav.Link to="#pricing" as={Link}>Joyería</Nav.Link>
+            <Nav.Link to="/category/smartphones" as={Link}>Smartphones</Nav.Link>
+            <Nav.Link to="/category/tablets" as={Link}>Tablets</Nav.Link>
+            <Nav.Link to="/category/laptops" as={Link}>laptops</Nav.Link>
           </Nav>
           </>
     )
