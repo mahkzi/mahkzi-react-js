@@ -7,9 +7,6 @@ function Item({item}){
                 <Card border="ligth" className="text-center">
                 <Card.Img variant="top" src={item.thumbnail} />
                  <Card.Body>
-                 <Card.Text>
-            Category:{item.category}
-        </Card.Text>
         <Card.Title>{item.title}</Card.Title>
         <Card.Text>
             {item.price}$
