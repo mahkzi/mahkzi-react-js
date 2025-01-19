@@ -6,7 +6,7 @@ function ItemListContainer(){
     const{id}=useParams()
     useEffect(()=>{
         const allProducts='https://dummyjson.com/products'
-        const byCategory=`https://dummyjson.com/products/category${id}`
+        const byCategory=`https://dummyjson.com/products/category/${id}`
         fetch(id ? byCategory : allProducts)
         .then(res => res.json())
         .then(res=>setItems(res.products))
