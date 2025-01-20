@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router';
 function Item({item}){
     return(
 <Col lg={4}>
@@ -11,7 +12,7 @@ function Item({item}){
         <Card.Text>
             {item.price}$
         </Card.Text>
-        <Button variant="primary" size="sm">Ir al detalle</Button>
+        <Button variant="primary" size="sm" as={Link} to={`/product/${item.id}`}>Ir al detalle</Button>
       </Card.Body>
                 </Card>
             </Col>
