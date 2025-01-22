@@ -1,18 +1,20 @@
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ItemDetailCarousel from './ItemDetailCarousel';
-function ItemDetail(item){
+import ItemCount from './ItemCount';
+function ItemDetail({item}){
     return(
         <Container>
         <Card className="text-center">
-             <ItemDetailCarousel item={item}/>
+        <Card.Img variant="top" src={item?.images} />
         <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>{item?.title}</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+            {item?.price}$
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Text>
+            {item?.description}
+        </Card.Text>
+        <ItemCount />
          </Card.Body>
          </Card>
         </Container>
