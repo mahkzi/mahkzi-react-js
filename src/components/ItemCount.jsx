@@ -1,21 +1,31 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import Button from 'react-bootstrap/Button'
-function ItemCount(){
+import CartContext from "../context/CartContext"
+function ItemCount({item}){
     const [count, setCount] = useState(0)
+
+    const { addToCart } = useContext (CartContext)
+
     const handleAdd= () => {
         setCount(count+1)
     }
     const handleSubstract= () => {
         setCount(count-1)
     }
+    const handleAddToCart = () => {
+    addToCart({ ...item, quantity: count })
+  }
 return(
     <>
     <p>{count}</p>
       <Button onClick={handleAdd} variant="outline-success" size="sm" active>
-        Agregar al carrito
+        Sumar
       </Button>
       <Button onClick={handleSubstract} variant="outline-danger" size="sm" active>
-        Quitar del carrito
+        Restar
+      </Button>
+      <Button onClick={handleAddToCart}  size="sm" active>
+        agregar al carrito
       </Button>
     </>
     )

@@ -14,7 +14,7 @@ function ItemDetail({item}){
         <Card.Text>
             {item?.description}
         </Card.Text>
-        <ItemCount />
+        <ItemCount item={item} />
          </Card.Body>
          </Card>
         </Container>
