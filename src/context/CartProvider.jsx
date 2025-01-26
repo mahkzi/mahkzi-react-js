@@ -11,7 +11,7 @@ function CartProvider({children}){
         return cantidadTotal
     }
     return(
-        <CartContext.Provider value={[...cart, addToCart, getQuantity]}>
+        <CartContext.Provider value={{...cart, addToCart, getQuantity}}>
         {children}
     </CartContext.Provider>   
     )
