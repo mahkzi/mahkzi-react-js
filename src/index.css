@@ -33,6 +33,19 @@ body{
   font-size: 1.2rem;
   color: grey;
 }
+.container-carrito{
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  justify-items: center;
+  width: 60%;
+  margin-top: 5%;
+}
+.texto-total{
+align-self: center;
+margin: 1%;
+font-size: 1.2rem;
+}
 .carrito{
   display: flex;
   align-items: center;
