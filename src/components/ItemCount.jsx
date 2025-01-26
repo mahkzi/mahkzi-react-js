@@ -16,7 +16,7 @@ function ItemCount({item}){
     addToCart({ ...item, quantity: count })
   }
 return(
-    <>
+    <div>
     <p>{count}</p>
       <Button onClick={handleAdd} variant="outline-success" size="sm" active>
         Sumar
@@ -27,7 +27,7 @@ return(
       <Button onClick={handleAddToCart}  size="sm" active>
         agregar al carrito
       </Button>
-    </>
+      </div>
     )
 }
 export default ItemCount
