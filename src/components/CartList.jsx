@@ -1,7 +1,7 @@
 import {Button} from "react-bootstrap"
 import { ListGroup } from "react-bootstrap"
-function CartList({items}){
-    return(
+function CartList ({items}) {
+    return (
         <ListGroup className="w-60">
             {items.map (item => (
                  <ListGroup.Item className="d-flex justify-content-between" key={item.id}>

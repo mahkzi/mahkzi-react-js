@@ -5,7 +5,7 @@ function Cart (){
     const {cart} = useCart()
     return(
         <div className="container-carrito">
-            <CartList items={cart} />
+            <CartList items= {cart} />
         <p className="texto-total">Total:$</p>
         <Button variant="outline-dark">Finalizar Compra</Button>
         </div>
