@@ -46,6 +46,11 @@ align-self: center;
 margin: 1%;
 font-size: 1.2rem;
 }
+.cart-view{
+  justify-content: center;
+  justify-items: center;
+justify-self: center;
+}
 .carrito{
   display: flex;
   align-items: center;
