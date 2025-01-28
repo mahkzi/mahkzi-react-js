@@ -46,6 +46,14 @@ align-self: center;
 margin: 1%;
 font-size: 1.2rem;
 }
+.container-form{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.title-form{
+ opacity: 0.8;
+}
 .carrito{
   display: flex;
   align-items: center;

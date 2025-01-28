@@ -16,7 +16,7 @@ function Cart (){
         <div className="container-carrito">
             <CartList items={cart} />
         <p className="texto-total">Total:$ {totalPurchase()}</p>
-        <Button variant="outline-dark">Finalizar Compra</Button>
+        <Button variant="outline-dark" as={Link} to="/checkout">Finalizar Compra</Button>
         </div>
     )
 }
