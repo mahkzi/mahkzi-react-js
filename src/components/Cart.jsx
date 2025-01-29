@@ -1,7 +1,7 @@
-import Button from 'react-bootstrap/Button';
-import CartList from './CartList';
-import { useCart } from '../context/CartContext';
-import { Link } from 'react-router';
+import Button from 'react-bootstrap/Button'
+import CartList from './CartList'
+import { useCart } from '../context/CartContext'
+import { Link } from 'react-router'
 function Cart (){
     const {cart, totalPurchase} = useCart()
     if (cart.length === 0){

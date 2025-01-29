@@ -1,7 +1,7 @@
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Item from './Item';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Item from './Item'
 function ItemList ({items}){
 return(
 <Container>

@@ -1,6 +1,6 @@
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import ItemCount from './ItemCount';
+import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
+import ItemCount from './ItemCount'
 function ItemDetail({item}){
     return(
         <Container>

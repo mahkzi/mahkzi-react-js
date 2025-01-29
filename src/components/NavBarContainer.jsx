@@ -1,5 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import NavBarLinks from './NavBarLinks';
+import Container from 'react-bootstrap/Container'
+import NavBarLinks from './NavBarLinks'
 function NavBarContainer(){
     return(
         <Container>
