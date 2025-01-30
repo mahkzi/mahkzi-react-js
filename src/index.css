@@ -59,6 +59,15 @@ font-size: 1.2rem;
   justify-content: space-around;
   align-items: center;
 }
+.empty-cart{
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.cart-items{
+  display:inline;
+  margin-left: 85%;
+}
 .carrito{
   display: flex;
   align-items: center;
