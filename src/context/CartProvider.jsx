@@ -9,6 +9,9 @@ function CartProvider({children}){
             
         alert("Su producto ya esta en el carrito")
     }
+    const clearCart = () =>{
+        return setCart([delete cart.items])
+    }
 
     const getQuantity = () => {
         const cantidades = cart.map(item => item.quantity)

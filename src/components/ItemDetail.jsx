@@ -4,8 +4,12 @@ import ItemCount from './ItemCount'
 function ItemDetail({item}){
     return(
         <Container>
-        <Card className="text-center">
-        <Card.Img variant="top" src={item?.image} />
+             <Card className="text-center">
+            <div>
+                <img src={item?.image} alt="img-producto" />
+            </div>
+            <div>
+            <Card className="cart-detail">
         <Card.Body>
         <Card.Title>{item?.name}</Card.Title>
         <Card.Text>
@@ -16,6 +20,8 @@ function ItemDetail({item}){
         </Card.Text>
         <ItemCount item={item} />
          </Card.Body>
+            </Card>
+            </div>
          </Card>
         </Container>
     )

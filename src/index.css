@@ -54,6 +54,11 @@ font-size: 1.2rem;
 .title-form{
  opacity: 0.8;
 }
+.button-detail{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .carrito{
   display: flex;
   align-items: center;

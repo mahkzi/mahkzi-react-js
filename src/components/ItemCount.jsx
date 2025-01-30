@@ -17,16 +17,18 @@ function ItemCount({item}){
   }
 return(
     <div>
-    <p>{count}</p>
-      <Button onClick={handleAdd} variant="outline-success" size="sm" active>
-        Sumar
-      </Button>
-      <Button onClick={handleSubstract} variant="outline-danger" size="sm" active>
+      <div><p> Cantidad agregada: {count}</p></div>
+    <div className="button-detail">
+      <Button onClick={handleSubstract}  variant="outline-dark" size="sm" active>
         Restar
       </Button>
-      <Button onClick={handleAddToCart}  size="sm" active>
+      <Button onClick={handleAddToCart}   variant="outline-dark" size="sm" active>
         agregar al carrito
       </Button>
+      <Button onClick={handleAdd}  variant="outline-dark" size="sm" active>
+        Sumar
+      </Button>
+      </div>
       </div>
     )
 }
