@@ -7,6 +7,6 @@ const firebaseConfig = {
   storageBucket: "maxis-db.firebasestorage.app",
   messagingSenderId: "577153994385",
   appId: "1:577153994385:web:4a531061c3d93f92d67930"
-};
+} 
 
-export const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig)

@@ -5,20 +5,24 @@ function CartProvider({children}){
     const [cart, setCart] = useState([])
 
     const addToCart = item => {
-        const isInCart = cart.some(prod => prod.id === item.id)
+     const isInCart = cart.some(prod => prod.id === item.id)
         if (!isInCart) return setCart([...cart, item]) 
-            else{ 
-        return(
-            Swal.fire({
+         else{ 
+             return(
+             Swal.fire({
                 title: "El producto ya fue agregado al carrito",
                 icon: "question"
               })
         )
               }
     }
-    const subtractFromCart = item =>{
-        const isInCart = cart.splice(prod => prod.id === item.id)
-        return console.log(isInCart)
+    const removeFromCart = (itemId) => {
+        const updatedCart = cart.filter(prod => prod.id !== itemId)
+            setCart(updatedCart)
+             Swal.fire({
+                 title: "Producto eliminado del carrito",
+                 icon: "success",
+          });
     }
 
     const clearCart = () =>{
@@ -37,7 +41,7 @@ function CartProvider({children}){
         return total
     }
     return(
-        <CartContext.Provider value={{cart, addToCart, getQuantity, totalPurchase, clearCart, subtractFromCart,}}>
+    <CartContext.Provider value={{cart, addToCart, getQuantity, totalPurchase, clearCart, removeFromCart}}>
         {children}
     </CartContext.Provider>   
     )

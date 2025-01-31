@@ -4,7 +4,7 @@ function CartList ({items}) {
     return (
         <ListGroup>
             {items.map(item => <CartItem item={item} key={item.id}/>)}
-            </ListGroup>
+         </ListGroup>
     )
 }
 export default CartList

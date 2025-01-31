@@ -33,13 +33,16 @@ export const getOneProduct = async(id) =>{
 if (docSnap.exists()) {
     return docSnap.data()
 } else {
- console.log("No such document!")
+  Swal.fire({
+    title: "Algo salió mal",
+    icon: "error"
+  })
 }
 }
 
   export const newOrder = async(order) =>{
     try {
-        const docRef = await addDoc(collection(db, "orders"), order)
+      const docRef = await addDoc(collection(db, "orders"), order)
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -50,11 +53,12 @@ if (docSnap.exists()) {
         }).then(() => {
          window.location.href = '/'
         })
-      } catch (e) {
+      } 
+    catch (e) {
         Swal.fire({
           title: "Algo salió mal",
           text: "That thing is still around?".e,
           icon: "error"
-        });
+        })
       }
   }

@@ -4,11 +4,13 @@ import Col from 'react-bootstrap/Col'
 import { Link } from 'react-router'
 function Item({item}){
     return(
-<Col lg={4}>
-                <Card border="ligth" className="text-center">
-                <Card.Img variant="top" src={item.image} />
-                 <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
+   <Col lg={4}>
+    <Card border="ligth" className="text-center">
+     <Card.Img variant="top" src={item.image} />
+     <Card.Body>
+        <Card.Title>
+            {item.name}
+        </Card.Title>
         <Card.Text>
             {item.price}$
         </Card.Text>
@@ -17,8 +19,8 @@ function Item({item}){
         </Card.Text>
         <Button variant="primary" size="sm" as={Link} to={`/product/${item.id}`}>Ir al detalle</Button>
       </Card.Body>
-                </Card>
-            </Col>
+     </Card>
+    </Col>
     )
 }
 export default Item
