@@ -1,5 +1,6 @@
 import { app } from "./configuracion"
 import { getFirestore, collection, getDocs, query, where, doc, getDoc, addDoc } from "firebase/firestore"
+import Swal from "sweetalert2"
 
 const db = getFirestore(app)
 
@@ -39,7 +40,18 @@ if (docSnap.exists()) {
   export const newOrder = async(order) =>{
     try {
         const docRef = await addDoc(collection(db, "orders"), order)
-        console.log("Document written with ID: ", docRef.id)
+        Swal.fire({
+          title:"El ID de su compra es:",
+          text: docRef.id,
+          confirmButtonText: "Save",
+         
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire("Saved!", "", "success")
+          } else if (result.isDenied) {
+            Swal.fire("Changes are not saved", "", "info")
+          }
+        });
       } catch (e) {
         console.error("Error adding document: ", e)
       }

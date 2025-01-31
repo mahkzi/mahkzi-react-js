@@ -9,8 +9,8 @@ function Cart (){
     const {cart, totalPurchase} = useCart()
     if (cart.length === 0){
         return(
-            <div>
-                <h1>Su carrito esta vacío</h1>
+            <div className='no-products'>
+                <h1>Usted vacío su carrito o no agregó ningún producto</h1>
                 <Button as={Link} to="/">Ir a ver productos</Button>
             </div>
         )

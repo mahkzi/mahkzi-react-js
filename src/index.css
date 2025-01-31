@@ -68,6 +68,12 @@ font-size: 1.2rem;
   display:inline;
   margin-left: 85%;
 }
+.no-products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .carrito{
   display: flex;
   align-items: center;

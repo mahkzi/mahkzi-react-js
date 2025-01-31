@@ -1,6 +1,6 @@
 import CartContext from "./CartContext"
 import { useState } from "react"
-import Toast from 'react-bootstrap/Toast'
+import Swal from "sweetalert2"
 function CartProvider({children}){
     const [cart, setCart] = useState([])
 
@@ -9,19 +9,20 @@ function CartProvider({children}){
         if (!isInCart) return setCart([...cart, item]) 
             else{ 
         return(
-            <Toast>
-                <Toast.Header>
-                </Toast.Header>
-                <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
-              </Toast>
+            Swal.fire({
+                title: "El producto ya fue agregado al carrito",
+                icon: "question"
+              })
         )
               }
     }
     const subtractFromCart = item =>{
-        const isInCart = cart.some(prod => prod.id === item.id)
+        const isInCart = cart.splice(prod => prod.id === item.id)
+        return console.log(isInCart)
     }
     const clearCart = () =>{
-         setCart([])
+        const emptyCart =  setCart([])
+        return emptyCart
     }
 
     const getQuantity = () => {
@@ -35,7 +36,7 @@ function CartProvider({children}){
         return total
     }
     return(
-        <CartContext.Provider value={{cart, addToCart, getQuantity, totalPurchase}}>
+        <CartContext.Provider value={{cart, addToCart, getQuantity, totalPurchase, clearCart, subtractFromCart}}>
         {children}
     </CartContext.Provider>   
     )
