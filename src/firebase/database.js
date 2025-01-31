@@ -41,18 +41,20 @@ if (docSnap.exists()) {
     try {
         const docRef = await addDoc(collection(db, "orders"), order)
         Swal.fire({
-          title:"El ID de su compra es:",
-          text: docRef.id,
-          confirmButtonText: "Save",
-         
-        }).then((result) => {
-          if (result.isConfirmed) {
-            Swal.fire("Saved!", "", "success")
-          } else if (result.isDenied) {
-            Swal.fire("Changes are not saved", "", "info")
-          }
-        });
+          position: "top-end",
+          icon: "success",
+          title: "Su Id de compra es",
+          text:docRef.id,
+          showConfirmButton: false,
+          timer: 3500
+        }).then(() => {
+         window.location.href = '/'
+        })
       } catch (e) {
-        console.error("Error adding document: ", e)
+        Swal.fire({
+          title: "Algo salió mal",
+          text: "That thing is still around?".e,
+          icon: "error"
+        });
       }
   }

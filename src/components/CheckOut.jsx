@@ -3,9 +3,10 @@ import { Button } from 'react-bootstrap'
 import { useCart} from '../context/CartContext'
 import { newOrder } from '../firebase/database'
 import { serverTimestamp } from 'firebase/firestore'
+import { Link } from 'react-router'
 
 const CheckOut = () =>{
-    const {cart, totalPurchase} = useCart()
+    const {cart, totalPurchase, clearCart} = useCart()
     const handleSubmit = (e) =>{
         e.preventDefault()
 
@@ -40,7 +41,10 @@ return(
             <Form.Control type="text" placeholder="+5491176379353" required/>
         </Form.Label>
         </Form.Group>
-        <Button variant="outline-dark" type='submit'>Finalizar la compra</Button>
+        <div className='button-detail'>
+        <Button onClick={clearCart} variant="outline-dark" type='submit'>Finalizar la compra</Button>
+        <Button as={Link} to="/" onClick={clearCart} variant="outline-dark">Volver al inicio y vaciar carrito</Button>
+        </div>
   </Form>
   </div>
 )

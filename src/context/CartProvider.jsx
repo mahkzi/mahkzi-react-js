@@ -20,6 +20,7 @@ function CartProvider({children}){
         const isInCart = cart.splice(prod => prod.id === item.id)
         return console.log(isInCart)
     }
+
     const clearCart = () =>{
         const emptyCart =  setCart([])
         return emptyCart
@@ -36,7 +37,7 @@ function CartProvider({children}){
         return total
     }
     return(
-        <CartContext.Provider value={{cart, addToCart, getQuantity, totalPurchase, clearCart, subtractFromCart}}>
+        <CartContext.Provider value={{cart, addToCart, getQuantity, totalPurchase, clearCart, subtractFromCart,}}>
         {children}
     </CartContext.Provider>   
     )
