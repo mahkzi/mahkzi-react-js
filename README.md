@@ -22,8 +22,6 @@ Esta es una aplicación desarrollada en **React.js** que permite a los usuarios 
 -   **Bootstrap** - Estilizado y diseño responsivo.
 
 
-    
-
 ## Documentación de Dependencias
 
 -   [React.js](https://react.dev/)
